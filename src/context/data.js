@@ -7,14 +7,14 @@ const DataProvider = ({ children }) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        axios.get('https://grocery-app-back-end-8.onrender.com/api/data')
-            .then(response => {
-                setData(response.data);
-            })
-            .catch(error => {
-                console.error('There was an error making the request!', error);
-            });
-    }, []);
+        axios.get(`${API_BASE_URL}/api/data`)
+          .then(response => {
+            setData(response.data);
+          })
+          .catch(error => {
+            console.error('There was an error making the request!', error);
+          });
+      }, []);
 
     return (
         <DataContext.Provider value={data}>
