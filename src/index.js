@@ -14,17 +14,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <DataProvider>
     <AuthProvider>
       <SearchProvider>
         <CartProvider>
+        <DataProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </DataProvider>
     </CartProvider>
     </SearchProvider>
     </AuthProvider>
-    </DataProvider>
   </React.StrictMode>
 );
 
