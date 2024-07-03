@@ -13,7 +13,7 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`${API_BASE_URL}/api/v1`)
+        axios.get(`${API_BASE_URL}/api/data`)
             .then(response => {
                 setData(response.data);
                 setLoading(false);
