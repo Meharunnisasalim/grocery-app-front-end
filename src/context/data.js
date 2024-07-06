@@ -12,6 +12,7 @@ const DataProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        console.log(`API_BASE_URL: ${API_BASE_URL}`);
         setLoading(true);
         axios.get(`${API_BASE_URL}/api/v1`)
             .then(response => {
